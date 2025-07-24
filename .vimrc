@@ -74,9 +74,9 @@ call plug#end()
 command! -bang -nargs=* Files
   \ call fzf#vim#files('', {'source': 'rg --files --hidden --glob "!.git/*"'}, <bang>0)
 
-command! -bang Files call fzf#vim#files(expand('%:p:h'), {
-  \ 'source': 'rg --files --hidden --glob "!.git/*"',
-  \ 'options': '--preview "batcat --style=numbers --color=always --line-range :50 {}"'
+command! -bang Files call fzf#vim#files(getcwd(), {
+  \ 'source': 'rg --files --hidden --follow --glob "!.git/*"',
+  \ 'options': '--preview "batcat --style=numbers --color=always --line-range :50 {}" --layout=reverse --border'
   \ }, <bang>0)
 
 
@@ -96,6 +96,8 @@ let g:fzf_preview_window = ['right:30%:hidden']
 
 " CoC
 
+let g:ale_virtualtext_cursor = 'disabled'
+
 let g:coc_global_extensions = [
 \ 'coc-clangd',
 \ 'coc-pyright',
@@ -110,9 +112,6 @@ let g:vimspector_enable_mappings = 'HUMAN'
 let g:vimspector_install_gadgets = [ 'CodeLLDB' ]
 
 " ALE
-
-" Set this. Airline will handle the rest.
-" let g:airline#extensions#ale#enabled = 1
 
 " Set this variable to 1 to fix files when you save them.
 let g:ale_fix_on_save = 1
