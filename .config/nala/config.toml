@@ -1,0 +1,10 @@
+[display]
+verbosity = "minimal"
+
+[history]
+enable = true
+max_entries = 50
+
+[download]
+parallel = true
+parallel_limit = 3
