@@ -79,17 +79,12 @@ command! -bang Files call fzf#vim#files(getcwd(), {
   \ 'options': '--preview "batcat --style=numbers --color=always --line-range :50 {}" --layout=reverse --border'
   \ }, <bang>0)
 
-
-" Mapeia Ctrl-P para abrir o finder de arquivos
 nnoremap <silent> <C-p> :Files<CR>
 
-" Pesquisa por buffers abertos
 nnoremap <silent> <leader>fb :Buffers<CR>
 
-" Pesquisa por palavras no projeto
 nnoremap <silent> <leader>fg :Rg<CR>
 
-" Pesquisa por tags
 nnoremap <silent> <leader>ft :Tags<CR>
 
 let g:fzf_preview_window = ['right:30%:hidden']
