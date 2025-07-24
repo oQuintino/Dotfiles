@@ -126,9 +126,9 @@ let g:ale_fix_on_save = 1
 
 " Don´t let ALE instantiate two clangd´s processes.
 " Instead, it can reuse that´s already instantiated by Coc
-let b:ale_linters = {'c': [], 'python': ['ruff', 'bandit'],}
+let g:ale_linters = {'c': [], 'python': ['ruff', 'bandit'],}
 
-let b:ale_fixers = {
+let g:ale_fixers = {
 \ '*': ['trim_whitespace'],
 \ 'c': ['clang-format'],
 \ 'python': ['isort', 'ruff_format'],
