@@ -40,11 +40,8 @@ Plug 'junegunn/vim-plug'
 Plug 'editorconfig/editorconfig-vim'
 
 " Insert vim-airline info bar
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-
-" Use this instead of vim-airline
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Insert sonokai theme plugin
 Plug 'sainnhe/sonokai'
@@ -52,7 +49,6 @@ Plug 'sainnhe/sonokai'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 " Plug 'honza/vim-snippets'
 
@@ -141,17 +137,15 @@ let g:ale_prettier_options = "--write"
 
 " Airline
 
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline_powerline_fonts = 1
-" let g:airline_theme = 'sonokai'
+let g:airline_powerline_fonts = 0
+let g:airline_theme = 'sonokai'
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#ale#enabled = 1
 
-let g:lightline = {
-  \ 'colorscheme': 'sonokai',
-  \ 'active': {
-  \   'left': [ ['mode'], ['readonly', 'filename', 'modified'] ],
-  \   'right': [ ]
-  \ }
-\ }
+let g:airline_section_z = '%l:%c'
+
+" Sonokai
 
 if has('termguicolors')
 	set termguicolors
