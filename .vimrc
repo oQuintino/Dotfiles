@@ -23,7 +23,6 @@ set nowritebackup    " No backup files
 set splitright       " Create the vertical splits to the right
 set splitbelow       " Create the horizontal splits below
 set autoread         " Update vim after file update from outside
-set mouse=a          " Enable mouse support
 filetype on          " Detect and set the filetype option and trigger the FileType Event
 filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
@@ -71,8 +70,6 @@ Plug 'vim-test/vim-test'
 
 " All of your Plugins must be added before the following line
 call plug#end()
-
-filetype plugin indent on    " Required
 
 " FZF
 
