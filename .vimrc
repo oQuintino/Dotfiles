@@ -107,8 +107,11 @@ let g:ale_virtualtext_cursor = 'disabled'
 let g:coc_global_extensions = [
 \ 'coc-clangd',
 \ 'coc-pyright',
+\ 'coc-html',
+\ 'coc-css',
+\ 'coc-json',
 \ 'coc-snippets',
-\ 'coc-json'
+\ 'coc-pairs'
 \ ]
 
 " Vimspector
