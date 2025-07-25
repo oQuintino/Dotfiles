@@ -30,6 +30,14 @@ filetype indent on   " Load the indent file for the file type, if any
 set laststatus=2
 set noshowmode
 
+" Bundle
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs ' .
+    \ 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * ++once PlugInstall --sync | source $MYVIMRC
+endif
+
 " Vim-plug Configurations
 
 call plug#begin()
