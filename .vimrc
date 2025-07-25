@@ -42,8 +42,6 @@ endif
 
 call plug#begin()
 
-Plug 'junegunn/vim-plug'
-
 " For reading .editorconfig files
 Plug 'editorconfig/editorconfig-vim'
 
