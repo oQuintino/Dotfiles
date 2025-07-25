@@ -102,8 +102,6 @@ let g:fzf_preview_window = ['right:30%:hidden']
 
 " CoC
 
-let g:ale_virtualtext_cursor = 'disabled'
-
 let g:coc_global_extensions = [
 \ 'coc-clangd',
 \ 'coc-pyright',
@@ -123,6 +121,8 @@ let g:vimspector_install_gadgets = [ 'CodeLLDB' ]
 " ALE
 
 " Set this variable to 1 to fix files when you save them.
+let g:ale_virtualtext_cursor = 'disabled'
+
 let g:ale_fix_on_save = 1
 
 " Don´t let ALE instantiate two clangd´s processes.
