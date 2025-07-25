@@ -66,8 +66,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 
 Plug 'neoclide/coc.nvim', {
-			\ 'branch': 'release',
-			\ 'for': ['c', 'cpp', 'python', 'ocaml', 'html', 'css', 'json']}
+\ 'branch': 'release',
+\ 'for': ['c', 'cpp', 'python', 'ocaml', 'html', 'css', 'json']
+\ }
 
 Plug 'puremourning/vimspector', { 'for': ['c', 'python'] }
 
@@ -126,8 +127,11 @@ let g:ale_virtualtext_cursor = 'disabled'
 let g:ale_fix_on_save = 1
 
 " Don´t let ALE instantiate two clangd´s processes.
-" Instead, it can reuse that´s already instantiated by Coc
-let g:ale_linters = {'c': [], 'python': ['ruff', 'bandit'],}
+" Instead, it can reuse what´s already instantiated by Coc
+let g:ale_linters = {
+\ 'c': [],
+\ 'python': ['ruff', 'bandit'],
+\ }
 
 let g:ale_fixers = {
 \ '*': ['trim_whitespace'],
