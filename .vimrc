@@ -1,3 +1,7 @@
+" Author: oQuintino
+" Source: https://github.com/oQuintino/Dotfiles
+" Description: Personal Vim configuration file.
+
 " Main Settings
 
 syntax on            " Enable syntax highlight
