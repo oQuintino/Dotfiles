@@ -52,20 +52,21 @@ Plug 'tpope/vim-sensible'
 " For reading .editorconfig files
 Plug 'editorconfig/editorconfig-vim'
 
-" Insert vim-airline info bar
+" The vim-airline info bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Insert sonokai theme plugin
+" The sonokai theme
 Plug 'sainnhe/sonokai'
 
+" The fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'sheerun/vim-polyglot'
 " Plug 'honza/vim-snippets'
 
-" Autocompletion / linter / fixer / debugger Plugins
+" Autocompletion, linter, fixer and debugger Plugins
 Plug 'dense-analysis/ale'
 
 Plug 'neoclide/coc.nvim', {
@@ -75,10 +76,9 @@ Plug 'neoclide/coc.nvim', {
 
 Plug 'puremourning/vimspector', { 'for': ['c', 'python'] }
 
-" Insert a test plugin for each language
-Plug 'vim-test/vim-test'
+" Test plugin
+Plug 'vim-test/vim-test', { 'for': ['python'] }
 
-" All of your Plugins must be added before the following line
 call plug#end()
 
 " FZF
