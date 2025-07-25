@@ -46,6 +46,9 @@ endif
 
 call plug#begin()
 
+" Minimal setup
+Plug 'tpope/vim-sensible'
+
 " For reading .editorconfig files
 Plug 'editorconfig/editorconfig-vim'
 
