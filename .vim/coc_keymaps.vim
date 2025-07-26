@@ -1,6 +1,7 @@
 " Author: oQuintino
 " Source: https://github.com/oQuintino/Dotfiles
 " Description: Personal Coc.nvim keymaps loaded after CocNvimInit
+" Adapted From: https://github.com/neoclide/coc.nvim?tab=readme-ov-file#example-vim-configuration
 
 function! ShowDocumentation() abort
   if CocAction('hasProvider', 'hover')

@@ -3,6 +3,7 @@
 " Description: Personal Vim configuration file.
 
 " Main Settings
+" Adapted From: https://www.manualdocodigo.com.br/vim-basico/
 
 syntax on            " Enable syntax highlight
 set nu               " Enable line numbers
