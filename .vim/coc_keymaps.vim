@@ -1,4 +1,6 @@
-" coc-keymaps.vim
+" Author: oQuintino
+" Source: https://github.com/oQuintino/Dotfiles
+" Description: Personal Coc.nvim keymaps loaded after CocNvimInit
 
 function! ShowDocumentation() abort
   if CocAction('hasProvider', 'hover')
