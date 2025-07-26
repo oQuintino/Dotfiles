@@ -38,8 +38,24 @@ function! s:setup_coc_keymaps() abort
   nmap <silent><nowait> gi <Plug>(coc-implementation)
   nmap <silent><nowait> gr <Plug>(coc-references)
 
+  " Refactorings
+  nmap <leader>rn <Plug>(coc-rename)
+  nmap <leader>ac <Plug>(coc-codeaction)
+  xmap <leader>ac <Plug>(coc-codeaction-selected)
+  nmap <leader>qf <Plug>(coc-fix-current)
+
+  nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)
+  xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+  nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+
   " Hover doc
   nnoremap <silent> K :call ShowDocumentation()<CR>
+
+  " Floating window scroll
+  if has('nvim-0.4.0') || has('patch-8.2.0750')
+    nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  endif
 endfunction
 
 if exists('*s:setup_coc_keymaps')
