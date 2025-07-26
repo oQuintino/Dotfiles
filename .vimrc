@@ -116,6 +116,11 @@ let g:coc_global_extensions = [
 \ 'coc-pairs'
 \ ]
 
+augroup CocKeymaps
+  autocmd!
+  autocmd User CocNvimInit source ~/.vim/coc_keymaps.vim
+augroup END
+
 " Vimspector
 
 let g:vimspector_enable_mappings = 'HUMAN'
