@@ -163,7 +163,7 @@ let g:airline_section_z = '%l:%c'
 " Sonokai
 
 if has('termguicolors')
-	set termguicolors
+  set termguicolors
 endif
 
 let g:sonokai_style = 'espresso'
