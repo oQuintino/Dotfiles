@@ -39,7 +39,7 @@ set noshowmode
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs ' .
-    \ 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+      \ 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * ++once PlugInstall --sync | source $MYVIMRC
 endif
 
@@ -65,15 +65,16 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'sheerun/vim-polyglot'
-" Plug 'honza/vim-snippets'
 
 " Autocompletion, linter, fixer and debugger Plugins
 Plug 'dense-analysis/ale'
 
 Plug 'neoclide/coc.nvim', {
-\ 'branch': 'release',
-\ 'for': ['c', 'cpp', 'python', 'ocaml', 'html', 'css', 'json']
-\ }
+      \ 'branch': 'release',
+      \ 'for': ['c', 'cpp', 'python', 'ocaml', 'html', 'css', 'json']
+      \ }
+
+" Plug 'honza/vim-snippets'
 
 Plug 'puremourning/vimspector', { 'for': ['c', 'python'] }
 
@@ -87,13 +88,13 @@ call plug#end()
 " Using fzf in combination with ripgrep to show only the files that are tracked by Git and ignoring
 " the ones specified in the .gitignore file.
 command! -bang -nargs=* Files
-  \ call fzf#vim#files('', {'source': 'rg --files --hidden --glob "!.git/*"'}, <bang>0)
+      \ call fzf#vim#files('', {'source': 'rg --files --hidden --glob "!.git/*"'}, <bang>0)
 
 command! -bang Files call fzf#vim#files(getcwd(), {
-  \ 'source': 'rg --files --hidden --follow --glob "!.git/*"',
-  \ 'options': '--preview "batcat --style=numbers --color=always --line-range :50 {}" ' .
-  \ '--layout=reverse --border'
-  \ }, <bang>0)
+      \ 'source': 'rg --files --hidden --follow --glob "!.git/*"',
+      \ 'options': '--preview "batcat --style=numbers --color=always --line-range :50 {}" ' .
+      \ '--layout=reverse --border'
+      \ }, <bang>0)
 
 nnoremap <silent> <C-p> :Files<CR>
 
@@ -108,14 +109,14 @@ let g:fzf_preview_window = ['right:30%:hidden']
 " CoC
 
 let g:coc_global_extensions = [
-\ 'coc-clangd',
-\ 'coc-pyright',
-\ 'coc-html',
-\ 'coc-css',
-\ 'coc-json',
-\ 'coc-snippets',
-\ 'coc-pairs'
-\ ]
+      \ 'coc-clangd',
+      \ 'coc-pyright',
+      \ 'coc-html',
+      \ 'coc-css',
+      \ 'coc-json',
+      \ 'coc-snippets',
+      \ 'coc-pairs'
+      \ ]
 
 augroup CocKeymaps
   autocmd!
@@ -126,7 +127,7 @@ augroup END
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
-let g:vimspector_install_gadgets = [ 'CodeLLDB' ]
+let g:vimspector_install_gadgets = ['CodeLLDB']
 
 " ALE
 
@@ -143,14 +144,14 @@ let g:ale_linters = {
 \ }
 
 let g:ale_fixers = {
-\ '*': ['trim_whitespace'],
-\ 'c': ['clang-format'],
-\ 'python': ['isort', 'ruff_format'],
-\ 'ocaml': ['ocp-indent'],
-\ 'html': ['prettier'],
-\ 'css': ['prettier'],
-\ 'javascript': ['prettier'],
-\ }
+      \ '*': ['trim_whitespace'],
+      \ 'c': ['clang-format'],
+      \ 'python': ['isort', 'ruff_format'],
+      \ 'ocaml': ['ocp-indent'],
+      \ 'html': ['prettier'],
+      \ 'css': ['prettier'],
+      \ 'javascript': ['prettier'],
+      \ }
 
 let g:ale_c_clangformat_options = "-style=file"
 
