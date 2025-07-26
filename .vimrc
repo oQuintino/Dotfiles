@@ -42,7 +42,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * ++once PlugInstall --sync | source $MYVIMRC
 endif
 
-" Vim-plug Configurations
+" Vim-plug
 
 call plug#begin()
 
