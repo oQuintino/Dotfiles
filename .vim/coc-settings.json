@@ -1,0 +1,56 @@
+{
+  "diagnostic-languageserver.linters": {
+    "ruff": {
+      "command": "ruff",
+      "args": [
+        "--quiet",
+        "--format",
+        "json",
+        "-"
+      ],
+      "sourceName": "ruff",
+      "parseJson": {
+        "errorsRoot": "",
+        "line": "location.row",
+        "column": "location.column",
+        "endLine": "end_location.row",
+        "endColumn": "end_location.column",
+        "message": "${message} [${code}]"
+      },
+      "securities": {
+        "F": "error",
+        "E": "error",
+        "W": "warning",
+        "I": "info"
+      }
+    },
+    "bandit": {
+      "command": "bandit",
+      "args": [
+        "-f",
+        "json",
+        "-"
+      ],
+      "sourceName": "bandit",
+      "parseJson": {
+        "errorsRoot": "results",
+        "line": "line_number",
+        "column": 1,
+        "message": "${issue_text} [${test_id}]"
+      },
+      "securities": {
+        "LOW": "info",
+        "MEDIUM": "warning",
+        "HIGH": "error"
+      }
+    }
+  },
+  "diagnostic-languageserver.filetypes": {
+    "python": [
+      "ruff",
+      "bandit"
+    ]
+  },
+  "coc.preferences.formatOnSave": false,
+  "python.formatting.provider": "none"
+}
