@@ -143,7 +143,7 @@ let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
 
 let g:ale_fixers = {
-      \ '*': ['trim_whitespace'],
+      \ '*': ['trim_whitespace', 'remove_trailing_lines'],
       \ 'c': ['clang-format'],
       \ 'python': ['isort', 'ruff_format'],
       \ 'ocaml': ['ocp-indent'],
