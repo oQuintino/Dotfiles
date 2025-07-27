@@ -85,6 +85,8 @@ call plug#end()
 
 " FZF
 
+let g:fzf_preview_window = ['right:30%:hidden']
+
 " Using fzf in combination with ripgrep to show only the files that are tracked by Git and ignoring
 " the ones specified in the .gitignore file.
 command! -bang -nargs=* Files
@@ -103,8 +105,6 @@ nnoremap <silent> <leader>fb :Buffers<CR>
 nnoremap <silent> <leader>fg :Rg<CR>
 
 nnoremap <silent> <leader>ft :Tags<CR>
-
-let g:fzf_preview_window = ['right:30%:hidden']
 
 " CoC
 
