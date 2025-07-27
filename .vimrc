@@ -134,17 +134,10 @@ let g:vimspector_install_gadgets = ['CodeLLDB']
 
 " ALE
 
-" Set this variable to 1 to fix files when you save them.
-let g:ale_virtualtext_cursor = 'disabled'
-
-let g:ale_fix_on_save = 1
-
-" Don´t let ALE instantiate two clangd´s processes.
-" Instead, it can reuse what´s already instantiated by Coc
-let g:ale_linters = {
-\ 'c': [],
-\ 'python': ['ruff', 'bandit'],
-\ }
+let g:ale_enabled = 0
+let g:ale_lint_on_save = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
 
 let g:ale_fixers = {
       \ '*': ['trim_whitespace'],
@@ -159,6 +152,9 @@ let g:ale_fixers = {
 let g:ale_c_clangformat_options = "-style=file"
 
 let g:ale_prettier_options = "--write"
+
+" Set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
 
 " Airline
 
