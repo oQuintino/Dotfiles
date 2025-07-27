@@ -2,6 +2,7 @@
 " Source: https://github.com/oQuintino/Dotfiles
 " Description: Personal Vim configuration file.
 
+
 " Main Settings
 " Adapted From: https://www.manualdocodigo.com.br/vim-basico/
 
@@ -53,18 +54,19 @@ Plug 'tpope/vim-sensible'
 " For reading .editorconfig files
 Plug 'editorconfig/editorconfig-vim'
 
+" The sonokai theme
+Plug 'sainnhe/sonokai'
+
+" Syntax highlight
+Plug 'sheerun/vim-polyglot'
+
 " The vim-airline info bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" The sonokai theme
-Plug 'sainnhe/sonokai'
-
 " The fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-Plug 'sheerun/vim-polyglot'
 
 " Autocompletion, linter, fixer and debugger Plugins
 Plug 'dense-analysis/ale'
