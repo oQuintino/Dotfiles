@@ -162,7 +162,8 @@ let g:airline_powerline_fonts = 0
 let g:airline_theme = 'sonokai'
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#ale#enabled = 0
+let g:airline#extensions#coc#enabled = 1
 
 let g:airline_section_z = '%l:%c'
 
