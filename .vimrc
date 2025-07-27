@@ -33,6 +33,11 @@ filetype on          " Detect and set the filetype option and trigger the FileTy
 filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
 
+set number
+set relativenumber
+set scrolloff=5
+set signcolumn=yes
+set shortmess+=c    " Less messages
 set laststatus=2
 set noshowmode
 
