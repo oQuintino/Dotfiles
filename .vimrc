@@ -74,12 +74,11 @@ Plug 'junegunn/fzf.vim'
 " Autocompletion, linter, fixer and debugger Plugins
 Plug 'dense-analysis/ale'
 
-Plug 'neoclide/coc.nvim', {
-      \ 'branch': 'release',
-      \ 'for': ['c', 'cpp', 'python', 'ocaml', 'html', 'css', 'json']
-      \ }
+let g:coc_filetypes = ['c', 'cpp', 'python', 'ocaml', 'html', 'css', 'json']
 
-" Plug 'honza/vim-snippets'
+Plug 'neoclide/coc.nvim', { 'branch': 'release', 'for': g:coc_filetypes }
+
+Plug 'honza/vim-snippets', { 'for': g:coc_filetypes }
 
 Plug 'puremourning/vimspector', { 'for': ['c', 'python'] }
 
