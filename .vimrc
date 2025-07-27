@@ -18,7 +18,7 @@ set hidden           " Hides the current buffer when a new file is openned
 set incsearch        " Incremental search
 set ignorecase       " Ingore case in search
 set smartcase        " Consider case if there is a upper case character
-set scrolloff=8      " Minimum number of lines to keep above and below the cursor
+set scrolloff=5      " Minimum number of lines to keep above and below the cursor
 set colorcolumn=100  " Draws a line at the given line to keep aware of the line size
 set signcolumn=yes   " Add a column on the left. Useful for linting
 set cmdheight=2      " Give more space for displaying messages
@@ -33,9 +33,7 @@ filetype on          " Detect and set the filetype option and trigger the FileTy
 filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
 
-set number
 set relativenumber
-set scrolloff=5
 set signcolumn=yes
 set shortmess+=c    " Less messages
 set laststatus=2
