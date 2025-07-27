@@ -111,6 +111,7 @@ nnoremap <silent> <leader>ft :Tags<CR>
 " CoC
 
 let g:coc_global_extensions = [
+      \ 'coc-diagnostic',
       \ 'coc-clangd',
       \ 'coc-pyright',
       \ 'coc-html',
