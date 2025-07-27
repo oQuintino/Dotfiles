@@ -156,7 +156,6 @@ let g:ale_c_clangformat_options = "-style=file"
 
 let g:ale_prettier_options = "--write"
 
-" Set this variable to 1 to fix files when you save them.
 let g:ale_fix_on_save = 1
 
 " Airline
