@@ -67,9 +67,6 @@ function! s:setup_coc_keymaps() abort
   omap ic <Plug>(coc-classobj-i)
   xmap ac <Plug>(coc-classobj-a)
   omap ac <Plug>(coc-classobj-a)
-
-  " Code lens
-  nmap <leader>cl <Plug>(coc-codelens-action)
 endfunction
 
 if exists('*s:setup_coc_keymaps')
