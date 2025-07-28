@@ -99,7 +99,7 @@ command! -bang -nargs=* Files
 command! -bang Files call fzf#vim#files(getcwd(), {
       \ 'source': 'rg --files --hidden --follow --glob "!.git/*"',
       \ 'options': '--preview "batcat --style=numbers --color=always --line-range :50 {}" ' .
-      \ '--layout=reverse --border'
+      \ '--layout=reverse'
       \ }, <bang>0)
 
 nnoremap <silent> <C-p> :Files<CR>
