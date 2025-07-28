@@ -39,6 +39,13 @@ set shortmess+=c    " Less messages
 set laststatus=2
 set noshowmode
 
+" Main Keymaps
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
 " Bundle
 
 if empty(glob('~/.vim/autoload/plug.vim'))
