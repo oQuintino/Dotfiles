@@ -39,6 +39,10 @@ set shortmess+=c    " Less messages
 set laststatus=2
 set noshowmode
 
+if has('termguicolors')
+  set termguicolors
+endif
+
 " Main Keymaps
 
 noremap <Up> <Nop>
@@ -176,10 +180,6 @@ let g:airline#extensions#coc#enabled = 1
 let g:airline_section_z = '%l:%c'
 
 " Sonokai
-
-if has('termguicolors')
-  set termguicolors
-endif
 
 let g:sonokai_style = 'espresso'
 let g:sonokai_better_performance = 1
