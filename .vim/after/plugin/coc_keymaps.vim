@@ -69,6 +69,7 @@ function! s:setup_coc_keymaps() abort
   omap ac <Plug>(coc-classobj-a)
 endfunction
 
-if exists('*s:setup_coc_keymaps')
-  call s:setup_coc_keymaps()
-endif
+augroup CocKeymaps
+  autocmd!
+  autocmd User CocNvimInit ++once call s:setup_coc_keymaps()
+augroup END
