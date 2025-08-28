@@ -155,10 +155,12 @@ let g:ale_fixers = {
       \ '*': ['trim_whitespace', 'remove_trailing_lines'],
       \ 'c': ['clang-format'],
       \ 'python': ['isort', 'ruff_format'],
-      \ 'ocaml': ['ocp-indent'],
+      \ 'ocaml': ["ocamlformat"],
       \ 'html': ['prettier'],
       \ 'css': ['prettier'],
       \ 'javascript': ['prettier'],
+      \ 'sh': ['shfmt'],
+      \ 'bash': ['shfmt'],
       \ }
 
 let g:ale_c_clangformat_options = "-style=file"
