@@ -85,7 +85,8 @@ Plug 'junegunn/fzf.vim'
 " Autocompletion, linter, fixer and debugger Plugins
 Plug 'dense-analysis/ale'
 
-let g:coc_filetypes = ['c', 'cpp', 'python', 'ocaml', 'html', 'css', 'json']
+let g:coc_filetypes = ['c', 'cpp', 'python', 'ocaml', 'html', 'css', 'json', 'sh', 'bash',
+      \ 'markdown', 'ocaml', 'fortran']
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release', 'for': g:coc_filetypes }
 
@@ -124,14 +125,15 @@ nnoremap <silent> <leader>ft :Tags<CR>
 " CoC
 
 let g:coc_global_extensions = [
+      \ 'coc-snippets',
+      \ 'coc-pairs',
       \ 'coc-diagnostic',
       \ 'coc-clangd',
       \ 'coc-pyright',
       \ 'coc-html',
       \ 'coc-css',
       \ 'coc-json',
-      \ 'coc-snippets',
-      \ 'coc-pairs'
+      \ 'coc-sh'
       \ ]
 
 " Vimspector

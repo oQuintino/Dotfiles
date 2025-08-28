@@ -1,4 +1,29 @@
 {
+  "languageserver": {
+    "fortls": {
+      "command": "fortls",
+      "filetypes": [
+        "fortran"
+      ],
+      "rootPatterns": [
+        ".fortls",
+        ".git/"
+      ],
+      "initializationOptions": {
+        "hoverSignature": true,
+        "variableHover": true,
+        "useSignatureHelp": true,
+        "autocompleteNoPrefix": true
+      }
+    },
+    "ocaml": {
+      "command": "ocamllsp",
+      "filetypes": ["ocaml", "ocamlinterface", "reason"],
+      "rootPatterns": ["_opam", "dune-project", ".git/"],
+      "trace.server": "verbose",
+      "InitializationOptions": {}
+    }
+  },
   "diagnostic-languageserver.linters": {
     "ruff": {
       "command": "ruff",
