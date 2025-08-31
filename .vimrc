@@ -39,6 +39,8 @@ set shortmess+=c    " Less messages
 set laststatus=2
 set noshowmode
 
+set cursorline
+
 if has('termguicolors')
   set termguicolors
 endif
